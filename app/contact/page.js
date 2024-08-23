@@ -63,12 +63,12 @@ const contact = () => {
           {info.map((item,index)=>{
             return(
               <li key={index} className='flex items-center gap-6 '>
-                <div className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center'>
+                <div className='w-[40px] h-[40px] md:w-[52px] md:h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center'>
                   <div className='text-[28px]'>{item.icon}</div>
                 </div>
                 <div className='flex-1'>
                   <p className='text-white/60'>{item.name}</p>
-                  <h3 className='text-white/80 text-xl'>{item.des}</h3>
+                  <h3 className='text-white/80 md:text-xl text-[15px]'>{item.des}</h3>
                 </div>
               </li>
             )
