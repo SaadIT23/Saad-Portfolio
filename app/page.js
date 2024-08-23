@@ -12,7 +12,7 @@ export default function Home() {
           <p className="xl:text-xl lg:text-[18px] lg:text-start sm:text-[20px] sm:text-center">Software Developer</p>
           <h1 className="xl:text-[80px] lg:text-[60px] lg:text-start sm:text-[50px] sm:text-center font-semibold leading-[1.1]">Hello I'm <br /> <span className="text-accent">Saad Imran</span></h1>
           {/* <h1 className="text-[48px] font-semibold leading-[1.1] text-accent">Saad Imran</h1> */}
-          <p className="text-white/80 lg:max-w-[500px] xl:text-[16px] lg:text-left lg:text-[14px] sm:text-center sm:max-w-[450px]">"Passionate software developer with expertise in building innovative and efficient solutions, leveraging modern technologies to create impactful applications."</p>
+          <p className="text-white/80 lg:max-w-[500px] xl:text-[16px] lg:text-left lg:text-[14px] sm:text-center sm:max-w-[450px]">Passionate software developer with expertise in building innovative and efficient solutions, leveraging modern technologies to create impactful applications.</p>
         </div>
 
         <div className="flex lg:gap-6  xl:min-w-[500px] lg:min-w-[450px] lg:flex-row lg:justify-start lg:items-start sm:flex-col sm:justify-center sm:items-center sm:gap-[10px]">
