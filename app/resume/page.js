@@ -154,7 +154,7 @@ const Resume = () => {
   return (
     <div>
       <div className="container flex  min-h-[80vh]  mx-auto my-5 min-w-[90%] lg:flex-row sm:flex-col lg:justify-start sm:justify-center lg:items-start sm:items-center">
-        <div className="2xl:w-[50%] lg:w-[30%] sm:w-[50%] min-h-full  flex flex-col items-center gap-8 pt-10 text-white font-medium">
+        <div className="2xl:w-[50%] lg:w-[30%] sm:w-[70%] min-h-full  flex flex-col items-center gap-8 pt-10 text-white font-medium">
           <button className={`2xl:w-[50%] lg:w-[80%] sm:w-[80%] bg-[#27272c] p-3 rounded-lg transition-all duration-300 hover:font-bold hover:bg-accent hover:text-primary ${ (active === 'exp')? 'bg-accent text-primary font-bold': '' }`} value={'experience'} onClick={handleClick}>Experience</button>
           <button className={`2xl:w-[50%] lg:w-[80%] sm:w-[80%] bg-[#27272c] p-3 rounded-lg transition-all duration-300 hover:font-bold hover:bg-accent hover:text-primary ${ (active === 'edu')? 'bg-accent text-primary font-bold': '' }`} value={'education'} onClick={handleClick}>Education</button>
           <button className={`2xl:w-[50%] lg:w-[80%] sm:w-[80%] bg-[#27272c] p-3 rounded-lg transition-all duration-300 hover:font-bold hover:bg-accent hover:text-primary ${ (active === 'skill')? 'bg-accent text-primary font-bold': '' }`} value={'skills'} onClick={handleClick}>Skills</button>
