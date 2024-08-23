@@ -126,7 +126,7 @@ const skills={
 
 
 
-const resume = () => {
+const Resume = () => {
   
   const [details, setDetails] = useState(experience)
   const [active, setActive] = useState("exp")
@@ -168,4 +168,4 @@ const resume = () => {
   )
 }
 
-export default resume
+export default Resume
