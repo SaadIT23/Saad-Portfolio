@@ -37,7 +37,7 @@ const Services = () => {
 
     <div className='container mx-auto min-h-[80vh]  m-3 flex xl:min-w-[90%] sm:min-w-[100%] md:gap-8 text-white/60 md:flex-row sm:flex-col  sm:justify-center sm:items-center md:justify-start sm:gap-[30px]'>
       
-       <div className=' md:w-[50%] min-h-full flex justify-center md:items-end flex-col md:gap-6 sm:w-[80%] sm:gap-[30px] sm:items-center'>
+       <div className=' md:w-[50%] min-h-full flex justify-center md:items-end flex-col md:gap-6 sm:w-[100%] sm:gap-[30px] sm:items-center'>
 
         <div className='2xl:h-[40%] xl:h-[50%] w-[80%] flex flex-col gap-4 justify-center group'>
           <div className='flex justify-between items-center'>
@@ -67,7 +67,7 @@ const Services = () => {
         
       </div>
 
-      <div className='md:w-[50%] min-h-full flex justify-center md:items-start flex-col md:gap-6 sm:w-[80%] sm:gap-[30px] sm:items-center'>
+      <div className='md:w-[50%] min-h-full flex justify-center md:items-start flex-col md:gap-6 sm:w-[100%] sm:gap-[30px] sm:items-center'>
       <div className='2xl:h-[40%] xl:h-[50%] w-[80%] flex flex-col gap-4 justify-center group'>
           <div className='flex justify-between items-center'>
           <p className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>{services[2].num}</p>
