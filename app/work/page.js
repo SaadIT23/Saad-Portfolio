@@ -37,7 +37,7 @@ const projects=[
   }
 ]
 
-const work = () => {
+const Work = () => {
   const [project, setproject] = useState(projects[0])
   const [index, setindex] = useState(0)
 
@@ -91,6 +91,6 @@ const work = () => {
   )
 }
 
-export default work
+export default Work
 
 
