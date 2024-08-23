@@ -14,7 +14,7 @@ const projects=[
     title: "E Commerce Store",
     des:"A full-stack e-commerce project involves creating a comprehensive online store, combining a responsive front-end with secure back-end systems for managing products, orders, and payments efficiently.",
     stack:[{name:"HTML"},{name:"CSS"},{name:"Javascript"},{name:"PHP"},{name:"MySQL"}],
-    image: [{src:"/E1.jpg"},{src:"/E2.jpg"},{src:"/E3.jpg"},{src:"/E8.jpg"},],
+    image: [{src:"./E1.jpg"},{src:"./E2.jpg"},{src:"./E3.jpg"},{src:"./E8.jpg"},],
     github: "https://github.com/SaadIT23/E-commerce-Project",
   },
   {
@@ -23,7 +23,7 @@ const projects=[
     title: "Portfolio Website",
     des:"A portfolio website showcases an individual's skills, projects, and achievements in a visually appealing and organized manner.",
     stack:[{name:"HTML"},{name:"CSS"},{name:"Javascript"},{name:"Bootstrap"}],
-    image: [{src:"/p1.jpg"},{src:"/p2.jpg"},{src:"/p3.jpg"},{src:"/p4.jpg"},],
+    image: [{src:"./p1.jpg"},{src:"./p2.jpg"},{src:"./p3.jpg"},{src:"./p4.jpg"},],
     github: "https://github.com/SaadIT23/Mahad-Portfolio",
   },
   {
@@ -32,7 +32,7 @@ const projects=[
     title: "Todo List App",
     des:"A to-do list web app helps users organize and track tasks efficiently.",
     stack:[{name:"React"},{name:"CSS"},{name:"Tailwind"}],
-    image: [{src:"/t1.jpg"},{src:"/t2.jpg"}],
+    image: [{src:"./t1.jpg"},{src:"./t2.jpg"}],
     github: "",
   }
 ]
