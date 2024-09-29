@@ -1,5 +1,5 @@
 "use client"
-import React,{useRef,useEffect} from 'react'
+import React,{useRef,useEffect, useState} from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 const Navbar = () => {
     const pathname=usePathname()
     const ref = useRef()
+    const [open, setopen] = useState(false)
     const Links=[
         {
             name:'Home',
@@ -31,25 +32,37 @@ const Navbar = () => {
     ]
 
     const handleClick=()=>{
-      if(ref.current.style.display !== "none"){
-        ref.current.style.display="none"
-      }
-      else{
-        ref.current.style.display="flex"
-      }
+      setopen(!open)
     }
 
     useEffect(() => {
-      ref.current.style.display="none"     
-    })
+      setopen(false)
+    },[])
+
+    useEffect(() => {
+      if(open){
+        ref.current.style.transform="translateX(0)"
+        ref.current.style.opacity="1"
+      }
+      else{
+        ref.current.style.transform="translateX(-100%)"
+        ref.current.style.opacity="0"
+      }
+    }, [open])
+
+    useEffect(() => {
+      setopen(false)
+    }, [pathname])
+    
+    
     
 
   return (
     <>
-      <div ref={ref} className="transition-all duration-500 md:hidden mob min-h-screen sticky top-0 left-0 w-[80vw] border bg-primary hidden z-10 flex-col justify-center">
+      <div ref={ref} className="transition-all duration-500 md:hidden mob min-h-screen fixed top-0 left-0 w-[80vw] border bg-primary z-10 flex-col justify-center transform -translate-x-full opacity-0">
       <button onClick={handleClick} className='self-start absolute top-3 left-2 text-3xl font-bold'><RxCross2 /></button>
-        <div className='h-[100%]'>
-      <ul className='flex flex-col gap-5 justify-center items-center'>
+        <div className='h-screen'>
+      <ul className='flex flex-col gap-5 justify-center items-center h-full'>
         {Links.map((link,index)=>{
           return <Link className={`text-base ${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`} href={link.path} key={index}>{link.name}</Link>
         })}
