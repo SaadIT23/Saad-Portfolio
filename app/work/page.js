@@ -33,7 +33,7 @@ const projects=[
     des:"A to-do list web app helps users organize and track tasks efficiently.",
     stack:[{name:"React"},{name:"CSS"},{name:"Tailwind"}],
     image: [{src:"./t1.JPG"},{src:"./t2.JPG"}],
-    github: "",
+    github: "https://github.com/SaadIT23/Todo-App",
   }
 ]
 
