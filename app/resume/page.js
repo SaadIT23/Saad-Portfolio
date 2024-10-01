@@ -132,7 +132,7 @@ const Resume = () => {
   const [active, setActive] = useState("exp")
 
   const handleClick=(e)=>{
-    console.log(e.target.value);
+    
     if(e.target.value === 'education'){
       setDetails(education)
       setActive('edu')
@@ -150,7 +150,7 @@ const Resume = () => {
       setActive('about')
     }
   }
-  console.log("re render");
+  
   return (
     <div>
       <div className="container flex  min-h-[80vh]  mx-auto my-5 min-w-[90%] lg:flex-row sm:flex-col lg:justify-start sm:justify-center lg:items-start sm:items-center">
