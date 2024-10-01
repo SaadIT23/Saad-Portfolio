@@ -40,7 +40,7 @@ const projects=[
 const Work = () => {
   const [project, setproject] = useState(projects[0])
   const [index, setindex] = useState(0)
-
+  const [isFading, setIsFading] = useState(false); // Manage fade state
   const handleNext = () => {
     setIsFading(true);
     setTimeout(() => {
