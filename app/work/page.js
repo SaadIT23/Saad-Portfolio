@@ -46,7 +46,7 @@ const Work = () => {
     setTimeout(() => {
       setindex((prevIndex) => {
         const newIndex = (prevIndex + 1) % projects.length;
-        setProject(projects[newIndex]);
+        setproject(projects[newIndex]);
         setIsFading(false); // Remove fade-out effect
         return newIndex;
       });
@@ -58,7 +58,7 @@ const Work = () => {
     setTimeout(() => {
       setindex((prevIndex) => {
         const newIndex = (prevIndex - 1 + projects.length) % projects.length;
-        setProject(projects[newIndex]);
+        setproject(projects[newIndex]);
         setIsFading(false); // Remove fade-out effect
         return newIndex;
       });
