@@ -5,6 +5,8 @@ import { SiTailwindcss,SiNextdotjs } from "react-icons/si"
 import { PiFileCpp } from "react-icons/pi";
 import { useState } from "react"
 import Details from '../components/Details';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 // about data 
 const about={
@@ -150,6 +152,15 @@ const Resume = () => {
       setActive('about')
     }
   }
+
+  useGSAP(()=>{
+    gsap.fromTo(".container .det",{opacity:0,x:20},{
+      delay:0.3,
+      opacity:1,
+      duration:0.5,
+      x:0
+    })
+  },[details])
   
   return (
     <div>
@@ -160,7 +171,7 @@ const Resume = () => {
           <button className={`2xl:w-[50%] lg:w-[80%] sm:w-[80%] bg-[#27272c] p-3 rounded-lg transition-all duration-300 hover:font-bold hover:bg-accent hover:text-primary ${ (active === 'skill')? 'bg-accent text-primary font-bold': '' }`} value={'skills'} onClick={handleClick}>Skills</button>
           <button className={`2xl:w-[50%] lg:w-[80%] sm:w-[80%] bg-[#27272c] p-3 rounded-lg transition-all duration-300 hover:font-bold hover:bg-accent hover:text-primary ${ (active === 'about')? 'bg-accent text-primary font-bold': '' }`} value={'about'} onClick={handleClick}>About me</button>
         </div>
-        <div className="2xl:w-[50%] lg:w-[70%] min-h-full flex flex-col pt-10 items-center">
+        <div className="det 2xl:w-[50%] lg:w-[70%] min-h-full flex flex-col pt-10 items-center">
           <Details details={details}/>
         </div>
       </div>
