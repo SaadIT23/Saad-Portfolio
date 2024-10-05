@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const info = [
   {
@@ -21,6 +23,16 @@ const info = [
 ]
 
 const contact = () => {
+  useGSAP(()=>{
+    gsap.from(".container >div",{
+      y:-20,
+      opacity:0,
+      delay:0.5,
+      duration:0.5,
+      stagger:0.3
+    })
+  })
+  
   return (
     <div className='container items-center  mx-auto flex flex-col lg:flex-row gap-[30px] w-[100vw] md:w-[95vw] xl:w-[85vw] min-h-[85vh]  2xl:max-h-[85vh] my-2'>
       <div className="form w-[90%] lg:w-[60%] max-h-full order-2 lg:order-none">
