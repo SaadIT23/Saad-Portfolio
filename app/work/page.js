@@ -6,6 +6,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BsArrowUpRight,BsGithub } from 'react-icons/bs'
 import { PiCaretLeftBold,PiCaretRightBold } from 'react-icons/pi'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const projects=[
   {
@@ -38,32 +40,35 @@ const projects=[
 ]
 
 const Work = () => {
-  const [project, setproject] = useState(projects[0])
-  const [index, setindex] = useState(0)
-  const [isFading, setIsFading] = useState(false); // Manage fade state
+  const [project, setProject] = useState(projects[0]);
+  const [index, setIndex] = useState(0);
+
   const handleNext = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setindex((prevIndex) => {
+ 
+      setIndex((prevIndex) => {
         const newIndex = (prevIndex + 1) % projects.length;
-        setproject(projects[newIndex]);
-        setIsFading(false); // Remove fade-out effect
+        setProject(projects[newIndex]);
         return newIndex;
       });
-    }, 500); // Animation duration
   };
 
   const handlePrev = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setindex((prevIndex) => {
+    
+      setIndex((prevIndex) => {
         const newIndex = (prevIndex - 1 + projects.length) % projects.length;
-        setproject(projects[newIndex]);
-        setIsFading(false); // Remove fade-out effect
+        setProject(projects[newIndex]);
         return newIndex;
       });
-    }, 500); // Animation duration
+
   };
+
+  useGSAP(()=>{
+    gsap.fromTo(".container > div",{opacity:0},{
+      opacity:1,
+      delay:0.5,
+      duration:0.5,
+    })
+  },[project])
 
   return (
     <div className='container mx-auto  min-h-[80vh] my-3 flex gap-5 xl:w-[85vw] lg:w-[97vw] lg:flex-row sm:flex-col  justify-center items-center  transition-all duration-500'>
