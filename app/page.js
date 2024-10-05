@@ -3,7 +3,36 @@ import { FiDownload } from "react-icons/fi";
 import Social from "./components/Social";
 import Photo from "./components/Photo";
 import Stats from "./components/Stats";
+import {useEffect} from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+
 export default function Home() {
+let timeline = gsap.timeline({paused:true});
+
+  useGSAP(() => {
+    timeline.from(".left > div", {
+      x: -20,
+      opacity: 0,
+      stagger: 0.5,
+      duration:0.5,
+      delay:1
+    });
+
+    timeline.from(".right",{
+      x:30,
+      opacity:0,
+      duration:0.5,
+    })
+
+  });
+
+  useEffect(() => {
+    timeline.play();
+  }, [])
+  
   return (
     <>
     <div className="container  min-h-[76vh] mx-auto flex xl:my-2 lg:w-[90%] xl:w-[100%] md:w-[80%] lg:my-2 lg:mb-5 lg:flex-row sm:flex-col sm:justify-center sm:items-center lg:justify-start lg:items-center lg:gap-0 sm:gap-8 sm:my-8">
