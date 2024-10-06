@@ -99,7 +99,7 @@ const Navbar = () => {
       </div>
       <ul className='md:flex gap-12 hidden'>
         {Links.map((link,index)=>{
-          return <Link className={`links text-base ${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`} href={link.path} key={index}>{link.name}</Link>
+          return <Link className={`links text-base ${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent`} href={link.path} key={index}>{link.name}</Link>
         })}
       </ul>
     </nav>
