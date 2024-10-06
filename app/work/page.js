@@ -72,7 +72,7 @@ const Work = () => {
 
   return (
     <div className='container mx-auto  min-h-[80vh] my-3 flex gap-5 xl:w-[85vw] lg:w-[97vw] lg:flex-row sm:flex-col  justify-center items-center  transition-all duration-500'>
-      <div className={`lg:w-[35%] sm:w-[95%] min-h-[100%] flex flex-col gap-[20px] justify-center transition-opacity duration-500 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`lg:w-[35%] sm:w-[95%] min-h-[100%] flex flex-col gap-[20px] justify-center`}>
       <div className="btns flex gap-3">
           <button onClick={()=> handlePrev()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretLeftBold/></button>
           <button onClick={()=> handleNext()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretRightBold/></button>
@@ -93,7 +93,7 @@ const Work = () => {
 
         <Link className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group' href={project.github} target='_blank'><BsGithub className='text-white text-3xl group-hover:text-accent'/></Link>
       </div>
-      <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center transition-opacity duration-500 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center`}>
           {project.image.map((img,index)=>{
             return<div key={index} className='w-[100%] h-[100%] shadow-md shadow-accent hover:border-2 hover:border-accent'>
             <Image src={img.src} width={400} height={280} quality={100} priority className='object-contain w-full h-full' alt=''/>
