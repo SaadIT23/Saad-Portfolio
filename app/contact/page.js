@@ -22,7 +22,7 @@ const info = [
   },
 ]
 
-const contact = () => {
+const Contact = () => {
   useGSAP(()=>{
     gsap.from(".container >div",{
       y:-20,
@@ -91,4 +91,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
