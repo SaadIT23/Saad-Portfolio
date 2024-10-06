@@ -11,7 +11,7 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(useGSAP);
 
 export default function Home() {
-let timeline = gsap.timeline({paused:true});
+let timeline = gsap.timeline();
 
   useGSAP(() => {
     timeline.from(".left > div", {
@@ -30,9 +30,7 @@ let timeline = gsap.timeline({paused:true});
 
   });
 
-  useEffect(() => {
-    timeline.play();
-  }, [])
+
   
   return (
     <>
