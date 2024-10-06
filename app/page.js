@@ -1,4 +1,4 @@
-
+"use client"
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import Social from "./components/Social";
