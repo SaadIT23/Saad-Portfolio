@@ -4,6 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+
 const Navbar = () => {
     const pathname=usePathname()
     const ref = useRef()
@@ -54,7 +59,23 @@ const Navbar = () => {
       setopen(false)
     }, [pathname])
     
-    
+    const tl=gsap.timeline()
+    useGSAP(()=>{
+
+      tl.from("nav .logo",{
+        y:-20,
+        opacity:0,
+        duration:0.3,
+        delay:0.5
+      })
+
+      tl.from("ul .links",{
+        y:-20,
+        opacity:0,
+        duration:0.3,
+        stagger:0.2
+      })
+    })
     
 
   return (
@@ -78,7 +99,7 @@ const Navbar = () => {
       </div>
       <ul className='md:flex gap-12 hidden'>
         {Links.map((link,index)=>{
-          return <Link className={`text-base ${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`} href={link.path} key={index}>{link.name}</Link>
+          return <Link className={`links text-base ${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`} href={link.path} key={index}>{link.name}</Link>
         })}
       </ul>
     </nav>
