@@ -93,7 +93,7 @@ const Work = () => {
 
         <Link className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group' href={project.github} target='_blank'><BsGithub className='text-white text-3xl group-hover:text-accent'/></Link>
       </div>
-      <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center`}>
+      <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center`}>
           {project.image.map((img,index)=>{
             return<div key={index} className='w-[100%] h-[100%] shadow-md shadow-accent hover:border-2 hover:border-accent'>
             <Image src={img.src} width={400} height={280} quality={100} priority className='object-contain w-full h-full' alt=''/>
