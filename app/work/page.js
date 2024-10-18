@@ -21,6 +21,15 @@ const projects=[
   },
   {
     num:"02",
+    category:"Front End Landing Page",
+    title: "iPhone 16 Landing Page",
+    des:"The iPhone 16 landing page features a sleek, modern design that showcases the device's stunning display and key features with high-quality images and engaging animations, providing an immersive and intuitive user experience across all devices.",
+    stack:[{name:"HTML"},{name:"CSS"},{name:"React js"},{name:"Tailwind"},{name:"GSAP"}],
+    image: [{src:"./ip1.jpg"},{src:"./ip2.jpg"},{src:"./ip3.jpg"},{src:"./ip5.jpg"},],
+    github: "https://github.com/SaadIT23/iPhone-16-Pro-Landing-Page",
+  },
+  {
+    num:"03",
     category:"Frontend Project",
     title: "Portfolio Website",
     des:"A portfolio website showcases an individual's skills, projects, and achievements in a visually appealing and organized manner.",
@@ -29,7 +38,7 @@ const projects=[
     github: "https://github.com/SaadIT23/Mahad-Portfolio",
   },
   {
-    num:"03",
+    num:"04",
     category:"Frontend + Backend",
     title: "Todo List App",
     des:"A to-do list web app helps users organize and track tasks efficiently.",
