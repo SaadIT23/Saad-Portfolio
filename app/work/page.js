@@ -25,7 +25,7 @@ const projects=[
     title: "iPhone 16 Landing Page",
     des:"The iPhone 16 landing page features a sleek, modern design that showcases the device's stunning display and key features with high-quality images and engaging animations, providing an immersive and intuitive user experience across all devices.",
     stack:[{name:"HTML"},{name:"CSS"},{name:"React js"},{name:"Tailwind"},{name:"GSAP"}],
-    image: [{src:"./ip1.jpg"},{src:"./ip2.jpg"},{src:"./ip3.jpg"},{src:"./ip5.jpg"},],
+    image: [{src:"./ip1.JPG"},{src:"./ip2.JPG"},{src:"./ip3.JPG"},{src:"./ip5.JPG"},],
     github: "https://github.com/SaadIT23/iPhone-16-Pro-Landing-Page",
   },
   {
