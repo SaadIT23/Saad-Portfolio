@@ -28,7 +28,7 @@ const Navbar = () => {
         },
         {
             name:'Work',
-            path:'/work',
+            path:'/showcase',
         },
         {
             name:'Contact',
