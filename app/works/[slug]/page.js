@@ -63,6 +63,12 @@ const projects = [
 
 ]
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.id,
+  }));
+}
+
 const Work = () => {
     const params = useParams();
     const [project, setProject] = useState(projects[0]);
@@ -104,12 +110,15 @@ const Work = () => {
         })
     })
 
-    useEffect(() => {
-        // console.log(params.slug);
-        let index = projects.findIndex((item) => item.id == params.slug)
-        // console.log(index);
-        setProject(projects[index])
-    }, [])
+     useEffect(() => {
+    if (slug) {
+      const projectIndex = projects.findIndex((item) => item.id === slug);
+      if (projectIndex !== -1) {
+        setProject(projects[projectIndex]);
+        setIndex(projectIndex);
+      }
+    }
+  }, [slug]);
 
 
     return (
