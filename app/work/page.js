@@ -109,6 +109,7 @@ const Work = () => {
         let index = projects.findIndex((item) => item.id == searchparams.get('slug'))
         // console.log(index);
         setProject(projects[index])
+        setIndex(index);
     }, [])
 
 
