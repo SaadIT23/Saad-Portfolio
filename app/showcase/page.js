@@ -8,27 +8,27 @@ const projects = [
     {
         id: "e-commerce-store",
         title: "E Commerce Store",
-        image: "/E1.JPG",
+        image: "./E1.JPG",
     },
     {
         id: "iphone-16-landing-page",
         title: "iPhone 16 Landing Page",
-        image: "/ip1.JPG"
+        image: "./ip1.JPG"
     },
     {
         id: "portfolio-website",
         title: "Portfolio Website",
-        image: "/p1.JPG",
+        image: "./p1.JPG",
     },
     {
         id: "todo-list-app",
         title: "Todo List App",
-        image: "/t1.JPG",
+        image: "./t1.JPG",
     },
     {
         id: "tourist-app",
         title: "Tourist App",
-        image: "/to1.JPG"
+        image: "./to1.JPG"
     }
 ]
 
@@ -74,7 +74,7 @@ const Showcase = () => {
 
                 {projects.map((item, index) => (
                     <div key={index} className='card text-center h-fit md:h-[30vh] w-fit border rounded-xl md:rounded-3xl hover:cursor-pointer border-accent md:border-white md:hover:border-accent shadow-accent shadow-md md:shadow-none  md:hover:shadow-accent md:hover:shadow-md transition-all duration-200 overflow-hidden relative group flex flex-col justify-center items-center' onClick={() => handleCardClick(item.id)}>
-                        <img src={`.$item.image`} className='object-contain md:object-cover h-full opacity-50 md:opacity-100   md:group-hover:opacity-50' alt="" />
+                        <img src={item.image} className='object-contain md:object-cover h-full opacity-50 md:opacity-100   md:group-hover:opacity-50' alt="" />
 
                         <p className='z-10 absolute w-[70%] md:w-full opacity-100   md:opacity-0 transition-all duration-200 md:group-hover:opacity-100 text-xs md:text-xl font-bold text-white/90'>{item.title}</p>
 
