@@ -113,36 +113,38 @@ const Work = () => {
 
 
     return (
-        <div className='container mx-auto  min-h-[80vh] my-3 flex gap-5 xl:w-[85vw] lg:w-[97vw] lg:flex-row sm:flex-col  justify-center items-center  transition-all duration-500 opacity-0'>
-            <div className={`lg:w-[35%] sm:w-[95%] min-h-[100%] flex flex-col gap-[20px] justify-center transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
-                <div className="btns flex gap-3">
-                    <button onClick={() => handlePrev()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretLeftBold /></button>
-                    <button onClick={() => handleNext()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretRightBold /></button>
-                </div>
-                <div className='text-6xl md:text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
-                <h3 className='leading-none text-sm text-accent border-b border-accent w-fit'>{project.title}</h3>
-                <h2 className='text-[35px] md:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>{project.category}</h2>
-                <p className='text-white/60 xl:text-[16px] md:text-[14px] text-[12px]'>{project.des}</p>
-
-                <ul className='flex gap-3'>
-                    {project.stack.map((item, index) => {
-                        return <li key={index} className='xl:text-xl md:text-lg text-sm text-accent'>{item.name}
-                            {index !== project.stack.length - 1 && ","}
-                        </li>
-                    })}
-                </ul>
-                <div className="border border-white/20"></div>
-
-                <Link className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group' href={project.github} target='_blank'><BsGithub className='text-white text-3xl group-hover:text-accent' /></Link>
-            </div>
-            <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
-                {project.image.map((img, index) => {
-                    return <div key={index} className='w-[100%] h-[100%] shadow-md shadow-accent hover:border-2 hover:border-accent'>
-                        <Image src={img.src} width={400} height={280} quality={100} priority={true} className='object-contain w-full h-full' alt='' />
+        <Suspense fallback={<div>Loading...</div>}>
+            <div className='container mx-auto  min-h-[80vh] my-3 flex gap-5 xl:w-[85vw] lg:w-[97vw] lg:flex-row sm:flex-col  justify-center items-center  transition-all duration-500 opacity-0'>
+                <div className={`lg:w-[35%] sm:w-[95%] min-h-[100%] flex flex-col gap-[20px] justify-center transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+                    <div className="btns flex gap-3">
+                        <button onClick={() => handlePrev()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretLeftBold /></button>
+                        <button onClick={() => handleNext()} className='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center'><PiCaretRightBold /></button>
                     </div>
-                })}
+                    <div className='text-6xl md:text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
+                    <h3 className='leading-none text-sm text-accent border-b border-accent w-fit'>{project.title}</h3>
+                    <h2 className='text-[35px] md:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>{project.category}</h2>
+                    <p className='text-white/60 xl:text-[16px] md:text-[14px] text-[12px]'>{project.des}</p>
+
+                    <ul className='flex gap-3'>
+                        {project.stack.map((item, index) => {
+                            return <li key={index} className='xl:text-xl md:text-lg text-sm text-accent'>{item.name}
+                                {index !== project.stack.length - 1 && ","}
+                            </li>
+                        })}
+                    </ul>
+                    <div className="border border-white/20"></div>
+
+                    <Link className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group' href={project.github} target='_blank'><BsGithub className='text-white text-3xl group-hover:text-accent' /></Link>
+                </div>
+                <div className={`lg:w-[65%] sm:w-[80%] min-h-[100%] grid grid-cols-1 md:grid-cols-2 gap-8 m-3 justify-items-center items-center place-content-center transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+                    {project.image.map((img, index) => {
+                        return <div key={index} className='w-[100%] h-[100%] shadow-md shadow-accent hover:border-2 hover:border-accent'>
+                            <Image src={img.src} width={400} height={280} quality={100} priority={true} className='object-contain w-full h-full' alt='' />
+                        </div>
+                    })}
+                </div>
             </div>
-        </div>
+        </Suspense>
     )
 }
 
