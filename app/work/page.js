@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import { useState } from 'react'
 
 import Link from 'next/link'
