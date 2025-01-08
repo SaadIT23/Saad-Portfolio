@@ -17,7 +17,7 @@ const projects = [
         title: "E Commerce Store",
         des: "A full-stack e-commerce project involves creating a comprehensive online store, combining a responsive front-end with secure back-end systems for managing products, orders, and payments efficiently.",
         stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }, { name: "PHP" }, { name: "MySQL" }],
-        image: [{ src: "/E1.jpg" }, { src: "/E2.jpg" }, { src: "/E3.jpg" }, { src: "/E8.jpg" },],
+        image: [{ src: "/E1.JPG" }, { src: "/E2.JPG" }, { src: "/E3.JPG" }, { src: "/E8.JPG" },],
         github: "https://github.com/SaadIT23/E-commerce-Project",
     },
     {
@@ -27,7 +27,7 @@ const projects = [
         title: "iPhone 16 Landing Page",
         des: "The iPhone 16 landing page features a sleek, modern design that showcases the device's stunning display and key features with high-quality images and engaging animations, providing an immersive and intuitive user experience across all devices.",
         stack: [{ name: "HTML" }, { name: "CSS" }, { name: "React js" }, { name: "Tailwind" }, { name: "GSAP" }],
-        image: [{ src: "/ip1.jpg" }, { src: "/ip2.jpg" }, { src: "/ip3.jpg" }, { src: "/ip5.jpg" },],
+        image: [{ src: "/ip1.JPG" }, { src: "/ip2.JPG" }, { src: "/ip3.JPG" }, { src: "/ip5.JPG" },],
         github: "https://github.com/SaadIT23/iPhone-16-Pro-Landing-Page",
     },
     {
@@ -37,7 +37,7 @@ const projects = [
         title: "Portfolio Website",
         des: "A portfolio website showcases an individual's skills, projects, and achievements in a visually appealing and organized manner.",
         stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }, { name: "Bootstrap" }],
-        image: [{ src: "/p1.jpg" }, { src: "/p2.jpg" }, { src: "/p3.jpg" }, { src: "/p4.jpg" },],
+        image: [{ src: "/p1.JPG" }, { src: "/p2.JPG" }, { src: "/p3.JPG" }, { src: "/p4.JPG" },],
         github: "https://github.com/SaadIT23/Mahad-Portfolio",
     },
     {
@@ -47,7 +47,7 @@ const projects = [
         title: "Todo List App",
         des: "A to-do list web app helps users organize and track tasks efficiently.",
         stack: [{ name: "React" }, { name: "CSS" }, { name: "Tailwind" }],
-        image: [{ src: "/t1.jpg" }, { src: "/t2.jpg" }],
+        image: [{ src: "/t1.JPG" }, { src: "/t2.JPG" }],
         github: "https://github.com/SaadIT23/Todo-App.git",
     },
     {
@@ -57,7 +57,7 @@ const projects = [
         title: "Tourist App",
         des: "A user-friendly platform for travelers to explore destinations, view locations on Google Maps, check ratings, filter by price or rating, save favorites, and share feedback for an enhanced travel experience.",
         stack: [{ name: "React" }, { name: "Tailwind" }, { name: "Node.js" }, { name: "MongoDB" }],
-        image: [{ src: "/to1.jpg" }, { src: "/to2.jpg" }, { src: "/to3.jpg" }, { src: "/to4.jpg" },],
+        image: [{ src: "/to1.JPG" }, { src: "/to2.JPG" }, { src: "/to3.JPG" }, { src: "/to4.JPG" },],
         github: "",
     },
 
