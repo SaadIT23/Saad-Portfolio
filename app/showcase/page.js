@@ -37,7 +37,7 @@ const Showcase = () => {
     const router = useRouter();
 
     const handleCardClick = (id) => {
-        router.push(`/works/${id}`);
+        router.push(`/work?slug=${id}`);
     };
 
     useGSAP(() => {
