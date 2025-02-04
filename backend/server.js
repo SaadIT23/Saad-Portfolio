@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['https://saad-portfolio-2feq.vercel.app', 'https://saadit23.github.io/Saad-Portfolio/'],
+  origin: ['https://saad-portfolio-2feq.vercel.app', 'https://saadit23.github.io/Saad-Portfolio'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
