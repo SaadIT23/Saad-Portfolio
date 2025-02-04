@@ -44,6 +44,7 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
 
   const handleChange = (e) => {
@@ -59,6 +60,8 @@ const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true);
+    
     try {
       const response = await fetch(`https://saad-portfolio-xi.vercel.app/api/contact`, {
         method: "POST",
@@ -78,6 +81,9 @@ const Contact = () => {
       }
     } catch (error) {
       toast.error("Failed to send message.", { autoClose: 3000 });
+    } finally {
+      // Re-enable the button after submission (either success or failure)
+      setIsSubmitting(false);
     }
   };
 
@@ -124,7 +130,7 @@ const Contact = () => {
           </select>
           <textarea name="message" id="" cols="30" rows="6" placeholder='Type your message here...' value={formData.message}
             onChange={handleChange} className='h-[200px] flex min-h-[80px] rounded-md border border-white/10 bg-primary px-4 py-5 text-base placeholder:text-white/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50' required></textarea>
-          <button className='bg-accent min-w-[200px] lg:max-w-40 py-2 px-3 rounded-full text-primary font-bold hover:bg-accent-hover mx-auto lg:mx-0'>Send Message</button>
+          <button className='bg-accent min-w-[200px] lg:max-w-40 py-2 px-3 rounded-full text-primary font-bold hover:bg-accent-hover mx-auto lg:mx-0' disabled={isSubmitting} >{isSubmitting ? "Sending..." : "Send Message"}</button>
         </form>
       </div>
 
