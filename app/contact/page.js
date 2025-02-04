@@ -60,7 +60,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.BACK_END_URL}/api/contact`, {
+      const response = await fetch(`https://saad-portfolio-xi.vercel.app/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
